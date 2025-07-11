@@ -343,7 +343,7 @@
         };
 
         try {
-          const response = await fetch(`${API_BASE_URL}/post`, {
+          const response = await fetch(`${API_BASE_URL}/posts`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -388,7 +388,7 @@
         const content = document.getElementById(`editContent-${postId}`).value;
 
         try {
-          const response = await fetch(`${API_BASE_URL}/post/${postId}`, {
+          const response = await fetch(`${API_BASE_URL}/posts/${postId}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json',
@@ -413,7 +413,7 @@
         if (!confirm('정말 삭제하시겠습니까?')) return;
 
         try {
-          const response = await fetch(`${API_BASE_URL}/post/${postId}`, {
+          const response = await fetch(`${API_BASE_URL}/posts/${postId}`, {
             method: 'DELETE',
           });
 

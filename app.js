@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(morgan('combined'));
-app.use('/', postRouter);
+app.use('/posts', postRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/ping', function (req, res, next) {
