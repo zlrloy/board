@@ -284,7 +284,9 @@
                                 작성일: ${formatDate(post.created_at)}
                                 ${
                                   post.updated_at !== post.created_at
-                                    ? ' | 수정됨'
+                                    ? ` | 수정일: ${formatDate(
+                                        post.updated_at
+                                      )}`
                                     : ''
                                 }
                             </div>
